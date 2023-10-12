@@ -39,12 +39,12 @@ namespace RockPaperScissors
           break;
         rpsInput2 += key.KeyChar;
       }
-      try
+      if (rpsInput1 == "rock" || rpsInput1 == "paper" || rpsInput1 == "scissors" && rpsInput2 == "rock" || rpsInput2 == "paper" || rpsInput2 == "scissors")
       {
         NewRPSGame newGame = new NewRPSGame(rpsInput1, rpsInput2);
         GameResults(newGame);
       }
-      catch
+      else
       {
         Console.WriteLine("!!!!!!!!!!!!!!!");
         Console.WriteLine("Please enter rock, paper, or scissors");
